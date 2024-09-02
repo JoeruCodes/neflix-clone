@@ -1,113 +1,171 @@
-import Image from "next/image";
+import Logo from "@/images/logo";
+import Header from "./components/Header";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="flex-col space-y-16">
+      <div className="border-b-8 border-slate-600/40">
+        <div
+          style={{
+            backgroundImage:
+              "url('https://assets.nflxext.com/ffe/siteui/vlv3/6cefb2f5-90be-4f57-adc4-f6c3c579273d/b58e6c17-4d27-47fc-9c33-8e37ba189859/NL-en-20240401-popsignuptwoweeks-perspective_alpha_website_small.jpg')",
+          }}
+          className="bg-cover bg-center bg-gradient-t from-black via-black/70 to-trasparent"
+        >
+          <Header>
+            <button className="text-lg text-clip rounded-md px-[70px] py-1 ring-slate-500 ring-1  ">
+              Hi
+            </button>
+            <button className="text-sm rounded-md px-4 py-2 bg-red-600 text-nowrap">
+              Sign In
+            </button>
+          </Header>
+          <div className="pt-[10%] pb-[12.5%] flex justify-center space-y-2  px-12">
+            <div className="flex-row-reverse justify-center space-y-4">
+              <div className="text-[400%] font-bold text-center">
+                Unlimited films, TV programmes and more
+              </div>
+
+              <div className="text-[125%] text-center">
+                Watch anywhere. Cancel at any time.
+              </div>
+              <div className="text-[125%] text-center pt-3">
+                Ready to watch? Enter your email to create or restart your
+                membership.
+              </div>
+
+              <div className="relative flex justify-center">
+                <div className="flex space-x-2 absolute">
+                  <input
+                    type="text"
+                    placeholder="Email Address"
+                    className="outline-none ring-1 ring-slate-600 bg-slate-500/10 py-4 pr-24 px-8 w-full rounded-md"
+                  ></input>
+                  <button className="text-xl placeholder:font-semibold rounded-md px-8 py-2 font-bold bg-red-600 text-nowrap">
+                    Get Started
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="border-b-8 border-slate-600/40 pb-16 px-12 lg:flex justify-center items-center">
+        <div className="text-center mb-4 space-y-3 w-full">
+          <div className="font-bold text-[400%]">Enjoy on your TV</div>
+          <div className="text-[125%] text">
+            Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+            players and more.
+          </div>
+        </div>
+
+        <div className="flex justify-center w-full">
+          <img
+            className=""
+            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+          />
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="border-b-8 border-slate-600/40 pb-16 px-12 lg:flex lg:flex-row-reverse justify-evenly items-center">
+        <div className="text-center mb-4 space-y-3 w-full">
+          <div className="font-bold text-[400%] ">
+            Download your programmes to watch offline
+          </div>
+          <div className="tetx-[125%]">
+            Save your favourites easily and always have something to watch.
+          </div>
+        </div>
+
+        <div className="flex justify-center w-full relative">
+          <img
+            className="max-w-full h-auto"
+            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+          ></img>
+          {/* <div className=" max-w-full min-w-[40%] py-4 ring-1 h-[14%]  ring-slate-600 bg-black absolute rounded-md translate-y-[375px]"></div> */}
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className="lg:flex items-center justify-evenly border-b-8 border-slate-600/40 pb-16 px-12">
+        <div className="text-center mb-4 space-y-3 w-full">
+          <div className="font-bold text-[400%] ">Watch everywhere</div>
+          <div className="text-[125%]">
+            Stream unlimited films and TV programmes on your phone, tablet,
+            laptop and TV.
+          </div>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className="flex justify-evenly w-full relative">
+          <img
+            className="max-w-full h-auto"
+            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
+          ></img>
+        </div>
       </div>
-    </main>
+
+      <div className="border-b-8 lg:flex lg:flex-row-reverse justify-evenly items-center border-slate-600/40 pb-16 px-12">
+        <div className="text-center mb-4 space-y-3 w-full text-wrap">
+          <div className="font-bold text-[400%] ">
+            Create profiles for children
+          </div>
+          <div className="text-[125%]">
+            Send children on adventures with their favourite characters in a
+            space made just for them – free with your membership.
+          </div>
+        </div>
+        <div className="flex justify-evenly w-full relative">
+          <img
+            className="max-w-full h-auto"
+            src="https://occ-0-2705-2706.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqexltvN1YmvXYIfX8B9CYwooUSIzOKneblRFthZAFsYLMgKMyNfeHwk16DmEkpIIcb6A3.png?r=f55"
+          ></img>
+        </div>
+      </div>
+
+      <div className="border-b-8 border-slate-600/40 pb-16 px-12 space-y-6">
+        <div className="text-center mb-4 space-y-3 w-full text-wrap">
+          <div className="font-bold text-3xl ">Frequently Asked Questions</div>
+        </div>
+
+        <div className="space-y-3">
+          <div className="w-full p-5 text-lg bg-slate-800 hover:bg-slate-500/50 transition delay-[50ms]">
+            What can I watch on Netflix
+          </div>
+          <div className="w-full p-5 text-lg bg-slate-800 hover:bg-slate-500/50 transition delay-[50ms]">
+            What is Netflix?
+          </div>
+          <div className="w-full p-5 text-lg bg-slate-800 hover:bg-slate-500/50 transition delay-[50ms]">
+            How much does Netflix cost?
+          </div>
+          <div className="w-full p-5 text-lg bg-slate-800 hover:bg-slate-500/50 transition delay-[50ms]">
+            Where can I watch?
+          </div>
+          <div className="w-full p-5 text-lg bg-slate-800 hover:bg-slate-500/50 transition delay-[50ms]">
+            How do I cancel?
+          </div>
+          <div className="w-full p-5 text-lg bg-slate-800 hover:bg-slate-500/50 transition delay-[50ms]">
+            Is Netflix good for children?
+          </div>
+        </div>
+
+        <div className="pb-[12.5%] flex justify-center space-y-2 px-12">
+          <div className="flex-row-reverse justify-center space-y-4">
+            <div className="text-lg text-center pt-3">
+              Ready to watch? Enter your email to create or restart your
+              membership.
+            </div>
+            <div className="flex space-x-2">
+              <input
+                type="text"
+                placeholder="Email Address"
+                className="outline-none ring-1 ring-slate-600 bg-slate-500/10 p-4 w-full rounded-md"
+              ></input>
+              <button className="text-xl placeholder:font-semibold rounded-md px-8 py-2 font-bold bg-red-600 text-nowrap">
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
